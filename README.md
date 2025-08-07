@@ -1,2 +1,0 @@
-# lexqr-landing
-landing page
