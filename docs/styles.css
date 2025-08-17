@@ -1,9 +1,10 @@
 :root {
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #000000;
-  --navy: #001F3F;
+  --navy: #003366;
+  --navy-dark: #00264d;
   --gray-mid: #888888;
-  --gray-light: #CCCCCC;
+  --gray-light: #cccccc;
 }
 
 /* Reset básico */
@@ -14,10 +15,26 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--black);
   background: var(--white);
   line-height: 1.6;
+}
+
+/* Link para saltar al contenido */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* Contenedor central */
@@ -45,15 +62,27 @@ body {
   color: var(--white);
   padding: 0.75rem 1.5rem;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--navy-dark);
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
 }
 
 /* HERO */
 .hero {
   position: relative;
-  background: url('hero-bg.jpg') center/cover no-repeat;
+  background: url("hero-bg.jpg") center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -77,7 +106,7 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -95,7 +124,7 @@ body {
 }
 
 .section-white h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
